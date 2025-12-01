@@ -1,5 +1,6 @@
 import { Clock, DollarSign, ShoppingCart, Star, Truck } from 'lucide-react'
 import React from 'react'
+import Navbar from '../Components/Navbar'
 
 function Home() {
 
@@ -32,6 +33,7 @@ function Home() {
 
     return (
         <>
+        <Navbar/>
             <section className="relative min-h-screen flex items-center justify-center">
                 {/* Background */}
                 <div className="absolute inset-0">
@@ -44,7 +46,7 @@ function Home() {
                 </div>
                 {/* Content */}
                 <div className="relative max-w-4xl mx-auto text-center px-6">
-                    <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-400 mb-6 leading-tight">
+                    <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-400 mb-6 leading-tight mt-32 md:mt-0">
                         Oxford Blue Laundry <br />
                         <span className="text-white">We do more than laundry</span>
                     </h1>
