@@ -32,78 +32,120 @@ function Home() {
 
     return (
         <>
-            <section className='h-screen'>
-                <div className='mx-auto text-center mt-32 p-4'>
-                    <h1 className='text-4xl font-extrabold text-blue-800 mb-10'>
-                        Oxford blue laundry <br /> do other things
-                    </h1>
-                    <p className='font-light text-lg'>
-                        We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
-                        Experience the Oxford Blue Laundry difference.
-                    </p>
+            <section className="relative min-h-screen flex items-center justify-center">
+                {/* Background */}
+                <div className="absolute inset-0">
+                    <img
+                        src="https://www.realsimple.com/thmb/lEk5Qokq8nuhwvjcqHNaWFJhpx0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ultimate-guide-to-laundry-GettyImages-1318399310-a636429e8e9948aca141c3cc5ef679d2.jpg"
+                        alt="Hero"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
                 </div>
-                <div className='flex justify-evenly text-center'>
-                    <div >
-                        <DollarSign className='mx-auto' />
-                        <h1>View pricing</h1>
-                        <p>Transparent pricing for all services</p>
-                    </div>
-                    <div>
-                        <ShoppingCart className='mx-auto' />
-                        <h1>Place order</h1>
-                        <p>Quick and easy order placement</p>
+                {/* Content */}
+                <div className="relative max-w-4xl mx-auto text-center px-6">
+                    <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-400 mb-6 leading-tight">
+                        Oxford Blue Laundry <br />
+                        <span className="text-white">We do more than laundry</span>
+                    </h1>
+
+                    <p className="text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto mb-12">
+                        We pick up your laundry, clean it to perfection, fold and iron with care,
+                        then deliver it back to your doorstep — experience the Oxford Blue Laundry difference.
+                    </p>
+
+                    {/* CTA Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 w-full max-w-lg mx-auto">
+                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition">
+                            <DollarSign className="mx-auto mb-3" size={36} />
+                            <h2 className="text-xl font-semibold">View Pricing</h2>
+                            <p className="text-sm text-gray-300 mt-1">
+                                Transparent pricing for all services
+                            </p>
+                        </div>
+
+                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition">
+                            <ShoppingCart className="mx-auto mb-3" size={36} />
+                            <h2 className="text-xl font-semibold">Place Order</h2>
+                            <p className="text-sm text-gray-300 mt-1">
+                                Quick and easy order placement
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section className='h-fit mx-auto bg-slate-300'>
+
+            <section className='h-fit mx-auto p-10'>
                 <h1 className='text-4xl font-bold text-blue-800 mb-10 text-center'>Why Choose Oxford blue?</h1>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-10 text-center max-w-6xl mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-10 text-center max-w-7xl mx-auto'>
                     <div className='p-10'>
-                        <Truck size={72} strokeWidth={2} absoluteStrokeWidth className='mx-auto text-blue-800 mb-6 bg-blue-200 rounded-full p-3' />
+                        <div className='bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors'>
+                            <Truck strokeWidth={1} absoluteStrokeWidth className='h-12 w-12 text-blue-600' />
+
+                        </div>
                         <h1 className='font-bold text-2xl mb-4'>Pickup and delivery</h1>
-                        <p>
+                        <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>
                             Convenient pickup and delivery right to your doorstep. No need to leave your home.
                         </p>
                     </div>
                     <div className='p-10'>
-                        <Star size={72} strokeWidth={2} absoluteStrokeWidth className='mx-auto text-blue-800 mb-6 bg-blue-200 rounded-full p-3' />
+                        <div className='bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors'>
+                            <Star strokeWidth={1} absoluteStrokeWidth className='h-12 w-12 text-blue-600' />
+
+                        </div>
                         <h1 className='font-bold text-2xl mb-4'>Premium quality</h1>
-                        <p>
+                        <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>
                             Professional cleaning, careful handling, and expert pressing for all your garments.
                         </p>
                     </div>
                     <div className='p-10'>
-                        <Clock size={72} strokeWidth={2} absoluteStrokeWidth className='mx-auto text-blue-800 mb-6 bg-blue-200 rounded-full p-3' />
+                        <div className='bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors'>
+                            <Clock strokeWidth={1} absoluteStrokeWidth className='h-12 w-12 text-blue-600' />
+
+                        </div>
                         <h1 className='font-bold text-2xl mb-4'>Fast turnaround</h1>
-                        <p>
+                        <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>
                             Quick and reliable service with flexible scheduling to fit your busy lifestyle.
                         </p>
                     </div>
                 </div>
             </section>
-            <section className='h-fit p-10'>
-                <h1>Our simple process</h1>
+            <section className='h-fit p-10 bg-slate-100'>
+                <h1 className='text-center font-bold text-4xl text-blue-800 mb-6'>Our simple process</h1>
                 <div className='grid grid-cols-1 md:grid-cols-4'>
-                    <div>
-                        <h1>1</h1>
-                        <h2>Pickup</h2>
-                        <p>We collect your laundry at your convenience</p>
-                    </div>
-                    <div>
-                        <h1>2</h1>
-                        <h2>Clean</h2>
-                        <p>Professional cleaning with premium detergents</p>
-                    </div>
-                    <div>
-                        <h1>3</h1>
-                        <h2>Press and fold</h2>
-                        <p>Expert pressing and careful folding</p>
-                    </div>
-                    <div>
-                        <h1>4</h1>
-                        <h2>Deliver</h2>
-                        <p>Fresh, clean clothes delivered to you</p>
-                    </div>
+                    {
+                        [
+                            {
+                                step: 1,
+                                title: "pickup",
+                                description: "We collect your laundry at your convenience",
+                            },
+                            {
+                                step: 2,
+                                title: 'Clean',
+                                description: 'Professional cleaning with premium detergents'
+                            },
+                            {
+                                step: 3,
+                                title: 'Press & Fold',
+                                description: 'Expert pressing and careful folding'
+                            },
+                            {
+                                step: 4,
+                                title: 'Deliver',
+                                description: 'Fresh, clean clothes delivered to you'
+                            },
+                        ].map((process) => (
+                            <div className='text-center'>
+                                <h1 className='font-bold text-white text-3xl rounded-full bg-blue-800 p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
+                                <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
+                                <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>{process.description}</p>
+                            </div>
+
+                        ))
+                    }
+
+
                 </div>
             </section>
             <section className='h-fit p-10'>
@@ -114,13 +156,12 @@ function Home() {
                         key={index}
                         className="py-10">
                         <div
-                            className="relative max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-6 md:gap-15">
+                            className={`relative max-w-4xl mx-auto  ${service.step % 2 === 1 ? "flex flex-col lg:flex-row" : "flex flex-col lg:flex-row-reverse"} items-center gap-6 md:gap-15 `}>
 
                             {/* Step Badge */}
-                            <div className="absolute -top-5 -left-5 bg-blue-800 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold shadow-xl">
+                            <div className={` ${service.step % 2 === 1 ? "absolute -top-5 -left-5" : " absolute -top-5 -right-5"} bg-blue-800 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold shadow-xl`}>
                                 {service.step}
                             </div>
-
                             {/* Image */}
                             <img
                                 className="lg:w-1/2 w-full h-80 object-cover rounded-4xl shadow-md"
@@ -174,7 +215,7 @@ function Home() {
                                 <h1 className='text-xl font-bold mb-3'>
                                     {item.title}
                                 </h1>
-                                <p className='text-sm'>
+                                <p className='text-sm font-light'>
                                     {item.description}
                                 </p>
                             </div>
