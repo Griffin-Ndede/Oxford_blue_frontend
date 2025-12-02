@@ -1,6 +1,7 @@
 import { Clock, DollarSign, ShoppingCart, Star, Truck } from 'lucide-react'
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 function Home() {
 
@@ -224,6 +225,7 @@ function Home() {
                         ))}
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }

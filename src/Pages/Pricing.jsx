@@ -1,5 +1,7 @@
 import { Box, BriefcaseBusiness, Shirt, Sparkles } from 'lucide-react'
 import React from 'react'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 function Pricing() {
 
@@ -52,8 +54,9 @@ function Pricing() {
 
     return (
         <>
-            <section className='h-fit p-10'>
-                <h1 className='text-4xl font-bold text-center mb-6'>Our pricing</h1>
+            <Navbar />
+            <section className='h-fit p-10 mt-32'>
+                <h1 className='text-5xl font-bold text-center mb-6'>Our pricing</h1>
                 <p className='text-lg font-light text-center mb-6 max-w-2xl mx-auto'>Transparent, competitive pricing for all your laundry needs. All prices include pickup, cleaning, pressing, and delivery.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 max-w-7xl mx-auto px-4">
@@ -70,7 +73,7 @@ function Pricing() {
                                     <h1 className="text-2xl font-bold">{laundry_service.category}</h1>
                                 </div>
 
-                                <table className="w-full text-slate-700">
+                                <table className="w-full">
                                     <tbody>
                                         {laundry_service.laundry_items.map((item, index) => (
                                             <tr
@@ -128,6 +131,7 @@ function Pricing() {
                     </p>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }
