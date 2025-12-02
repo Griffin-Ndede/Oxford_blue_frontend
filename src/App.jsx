@@ -2,6 +2,7 @@ import React from "react"
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from "./Pages/Home"
 import Pricing from "./Pages/Pricing"
+import Order from "./Pages/Order"
 
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       path: "/pricing",
       element: <Pricing/>
     },
+    {
+      path: "/order",
+      element: <Order/>
+    }
   ])
 
   return (
