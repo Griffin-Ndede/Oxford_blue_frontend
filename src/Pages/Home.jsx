@@ -33,7 +33,7 @@ function Home() {
 
     return (
         <>
-        <Navbar/>
+            <Navbar />
             <section className="relative min-h-screen flex items-center justify-center">
                 {/* Background */}
                 <div className="absolute inset-0">
@@ -46,14 +46,14 @@ function Home() {
                 </div>
                 {/* Content */}
                 <div className="relative max-w-4xl mx-auto text-center px-6">
-                    <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-400 mb-6 leading-tight mt-32 md:mt-0">
+                    <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-800 mb-6 leading-tight mt-32 md:mt-0">
                         Oxford Blue Laundry <br />
-                        <span className="text-white">We do more than laundry</span>
+                        <span className="text-white">Do other things</span>
                     </h1>
 
                     <p className="text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto mb-12">
-                        We pick up your laundry, clean it to perfection, fold and iron with care,
-                        then deliver it back to your doorstep — experience the Oxford Blue Laundry difference.
+                        We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
+                        Experience the Oxford Blue Laundry difference.
                     </p>
 
                     {/* CTA Cards */}

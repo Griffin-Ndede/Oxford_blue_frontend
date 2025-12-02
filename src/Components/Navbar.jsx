@@ -31,7 +31,7 @@ function Navbar() {
                             </Link>
 
                             <Link
-                                to="/about"
+                                to="/pricing"
                                 className="flex items-center gap-2 hover:text-custom-orange transition"
                             >
                                 <DollarSign size={20} />
@@ -39,7 +39,7 @@ function Navbar() {
                             </Link>
 
                             <Link
-                                to="/Order"
+                                to="/order"
                                 className="flex items-center gap-2 hover:text-custom-orange transition"
                             >
                                 <ShoppingCart size={20} />
@@ -85,7 +85,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                            to="/about"
+                            to="/pricing"
                             className="flex items-center gap-2 hover:text-custom-orange transition"
                         >
                             <DollarSign size={20} />
@@ -93,7 +93,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                            to="/Order"
+                            to="/order"
                             className="flex items-center gap-2 hover:text-custom-orange transition"
                         >
                             <ShoppingCart size={20} />
