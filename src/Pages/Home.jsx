@@ -15,7 +15,7 @@ function Home() {
         {
             title: "Expert Cleaning Process",
             description: "State-of-the-art equipment and premium detergents ensure your clothes get the best treatment.",
-            image: "https://images.ctfassets.net/9ycpqnc6ohsr/6CCVOCZnGmKCfE1HiETinK/f8cb90a383efdbb80eae1893374a4a52/ef9e5dab2cc86043cb7dc3a241c72716_2x.jpg",
+            image: "https://png.pngtree.com/png-vector/20240322/ourmid/pngtree-home-service-house-cleaning-and-laundry-wash-png-image_12190003.png",
             step: 2,
         },
         {
@@ -43,34 +43,34 @@ function Home() {
                         alt="Hero"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+                    <div className="absolute inset-0 bg-white/40 backdrop-blur-xs"></div>
                 </div>
                 {/* Content */}
                 <div className="relative max-w-4xl mx-auto text-center px-6">
                     <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-800 mb-6 leading-tight mt-32 md:mt-0">
                         Oxford Blue Laundry <br />
-                        <span className="text-white">Do other things</span>
+                        <span className="text-black">Do other things</span>
                     </h1>
 
-                    <p className="text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto mb-12">
+                    <p className="text-lg font-light sm:text-xl max-w-3xl mx-auto mb-12">
                         We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
                         Experience the Oxford Blue Laundry difference.
                     </p>
 
                     {/* CTA Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 w-full max-w-lg mx-auto">
-                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 w-full max-w-2xl mx-auto">
+                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-blue-800 hover:bg-white/20 transition">
                             <DollarSign className="mx-auto mb-3" size={36} />
                             <h2 className="text-xl font-semibold">View Pricing</h2>
-                            <p className="text-sm text-gray-300 mt-1">
+                            <p className="text-sm text-blue-800 mt-1">
                                 Transparent pricing for all services
                             </p>
                         </div>
 
-                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition">
+                        <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-blue-800 hover:bg-white/20 transition">
                             <ShoppingCart className="mx-auto mb-3" size={36} />
                             <h2 className="text-xl font-semibold">Place Order</h2>
-                            <p className="text-sm text-gray-300 mt-1">
+                            <p className="text-sm text-blue-800 mt-1">
                                 Quick and easy order placement
                             </p>
                         </div>
