@@ -11,17 +11,17 @@ function Pricing() {
             icon: <Shirt strokeWidth={1} absoluteStrokeWidth className="w-10 h-10 mx-auto" />,
             laundry_items:
                 [
-                    { name: "T-Shirts", price: "KES 50" },
-                    { name: "Jeans/Trousers", price: "KES 80" },
-                    { name: "Dresses", price: "KES 100" },
-                    { name: "Bedsheets (Single)", price: "KES 120" },
-                    { name: "Bedsheets (Double)", price: "KES 150" },
-                    { name: "Towels", price: "KES 60" },
-                    { name: "Ties", price: "KES 50" },
-                    { name: "Dress Shirts", price: "KES 80" },
+                    { name: "T-Shirts" },
+                    { name: "Jeans/Trousers" },
+                    { name: "Dresses" },
+                    { name: "Bedsheets (Single)" },
+                    { name: "Bedsheets (Double)" },
+                    { name: "Towels" },
+                    { name: "Ties" },
+                    { name: "Dress Shirts"},
                 ],
-            bgColor: 'bg-blue-50',
-            borderColor: 'border-blue-200'
+            bgColor: 'bg-custom-yellow',
+            borderColor: 'border-custom-yellow'
         },
         {
             category: "Suits and formal",
@@ -33,8 +33,8 @@ function Pricing() {
                 { name: "Formal Dress", price: "KES 300" },
 
             ],
-            bgColor: 'bg-purple-50',
-            borderColor: 'border-purple-200'
+            bgColor: 'bg-custom-blue',
+            borderColor: 'border-custom-blue/25'
         },
         {
             category: "Dry cleaning",
@@ -48,18 +48,17 @@ function Pricing() {
                 { name: "Delicate Fabrics", price: "KES 250" },
                 { name: "Duvet", price: "KES 800" }
             ],
-            bgColor: 'bg-green-50',
-            borderColor: 'border-green-200'
+            bgColor: 'bg-custom-yellow',
+            borderColor: 'border-custom-yellow'
         },
     ]
-
 
     return (
         <>
             <Navbar />
-            <section className='h-fit p-10 mt-32'>
-                <h1 className='text-5xl font-bold text-center mb-6'>Our pricing</h1>
-                <p className='text-lg font-light text-center mb-6 max-w-2xl mx-auto'>Transparent, competitive pricing for all your laundry needs. All prices include pickup, cleaning, pressing, and delivery.</p>
+            <section className='h-fit p-10'>
+                <h1 className='text-5xl font-bold text-center mb-6 mt-18'>Our pricing</h1>
+                <p className='text-lg font-light text-center mb-10 max-w-2xl mx-auto'>Transparent, competitive pricing for all your laundry needs. All prices include pickup, cleaning, pressing, and delivery.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 max-w-7xl mx-auto px-4">
                     {/* General Laundry */}
@@ -67,23 +66,23 @@ function Pricing() {
                         laundry_services.map((laundry_service, index) => (
                             <div
                                 key={index}
-                                className={`${laundry_service.bgColor} border ${laundry_service.borderColor} p-8 rounded-3xl shadow hover:shadow-xl transition w-full`}>
+                                className={` ${ index % 2 === 1 ? 'bg-custom-blue': 'bg-custom-yellow'} p-8  h-fit rounded-3xl shadow hover:shadow-xl transition w-full`}>
                                 <div className="mb-4 text-custom-blue mx-auto text-center">
-                                    <div className='bg-white p-6 w-fit rounded-full mx-auto shadow-xl mb-4'>
+                                    <div className={`bg-white p-6 w-fit rounded-full mx-auto shadow-xl mb-4 ${ index % 2 === 1 ? 'text-custom-blue': 'text-custom-yellow'}`}>
                                         {laundry_service.icon}
                                     </div>
-                                    <h1 className="text-2xl font-bold">{laundry_service.category}</h1>
+                                    <h1 className={`text-2xl font-bold ${ index % 2 === 1 ? 'text-custom-yellow': 'text-custom-blue'}`}>{laundry_service.category}</h1>
                                 </div>
 
-                                <table className="w-full">
+                                <table className='w-full'>
                                     <tbody>
                                         {laundry_service.laundry_items.map((item, index) => (
                                             <tr
                                                 key={index}
                                                 className="border-b border-slate-300 last:border-0"
                                             >
-                                                <td className="py-4">{item.name}</td>
-                                                <td className="py-4 text-right font-bold">{item.price}</td>
+                                                <td className="py-4 text-white font-light">{item.name}</td>
+                                                <td className="py-4 text-right font-bold text-white">{item.price}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -93,13 +92,12 @@ function Pricing() {
                         ))
                     }
                 </div>
-
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <div className="bg-white w-full md:w-2/3  mx-auto rounded-4xl p-8 border border-custom-yellow/25  shadow-lg">
                     <div className="text-center mb-8">
-                        <Box className="h-12 w-12 text-custom-blue mx-auto mb-4" />
+                        <Box strokeWidth={1} absoluteStrokeWidth className="h-20 w-20 text-custom-yellow mx-auto mb-4" />
                         <h2 className="text-2xl font-bold ">Additional Services</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="flex justify-around flex-wrap text-center gap-8 mx-auto">
                         <div>
                             <h3 className="text-lg font-bold  mb-4">Express Service</h3>
                             <p className=" mb-2">Same-day delivery available</p>
@@ -112,26 +110,26 @@ function Pricing() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-12 bg-custom-blue text-white rounded-2xl p-8">
+                {/* <div className="mt-12 bg-custom-blue text-white rounded-2xl p-8">
                     <h2 className="text-2xl font-bold text-center mb-6">Service Areas</h2>
                     <p className="text-center text-blue-100 mb-4">
                         Free pickup and delivery within 10km of our facility
                     </p>
                     <div className="grid md:grid-cols-3 gap-4 text-center">
-                        <div className="bg-blue-700 rounded-lg p-4">
+                        <div className="bg-custom-yellow rounded-3xl w-fit p-4">
                             <p className="font-semibold">Kingéero Mwisho</p>
                         </div>
-                        <div className="bg-blue-700 rounded-lg p-4">
+                        <div className="bg-custom-yellow rounded-3xl w-fit p-4">
                             <p className="font-semibold">Nearby Areas</p>
                         </div>
-                        <div className="bg-blue-700 rounded-lg p-4">
+                        <div className="bg-custom-yellow rounded-3xl w-fit p-4">
                             <p className="font-semibold">Extended Coverage</p>
                         </div>
                     </div>
                     <p className="text-center text-blue-200 text-sm mt-4">
                         Additional areas available with delivery fee
                     </p>
-                </div>
+                </div> */}
             </section>
             <Footer />
         </>

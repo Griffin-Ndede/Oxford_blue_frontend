@@ -3,13 +3,13 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide
 
 function Footer() {
   return (
-      <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <footer className="bg-gray-900 text-white py-8">
+      <div className="mx-auto px-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-blue-400">Oxford Blue Laundry</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-3xl font-bold mb-4 text-blue-400">Oxford Blue Laundry</h3>
+            <p className="text-white mb-6 font-light">
               Do Other Things. Premium home laundry services with pickup and delivery. 
               Experience the Oxford Blue Laundry difference in quality and convenience.
             </p>
@@ -26,15 +26,15 @@ function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">+254 700 123 456</span>
+                <span className="text-white">+254 700 123 456</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">info@oxfordblue.co.ke</span>
+                <span className="text-white">info@oxfordblue.co.ke</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">Kingéero Mwisho, Nairobi</span>
+                <span className="text-white">Kingéero Mwisho, Nairobi</span>
               </div>
             </div>
           </div>
@@ -45,17 +45,17 @@ function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">Mon - Fri: 7:00 AM - 8:00 PM</span>
+                <span className="text-white">Mon - Fri: 7:00 AM - 8:00 PM</span>
               </div>
-              <div className="text-gray-300 ml-6">Saturday: 8:00 AM - 6:00 PM</div>
-              <div className="text-gray-300 ml-6">Sunday: 9:00 AM - 5:00 PM</div>
+              <div className="text-white ml-6">Saturday: 8:00 AM - 6:00 PM</div>
+              <div className="text-white ml-6">Sunday: 9:00 AM - 5:00 PM</div>
             </div>
           </div>
 
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-white">
               <li>General Laundry</li>
               <li>Dry Cleaning</li>
               <li>Suits & Formal Wear</li>

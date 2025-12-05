@@ -1,20 +1,47 @@
-import React from 'react'
+import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { User, Phone, MapPin } from 'lucide-react'
+
+
 function Order() {
+
+
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        apartment: '',
+        building: '',
+        serviceType: 'general',
+        pickupDate: '',
+        notes: '',
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }))
+    }
+
+    function generateRandomNumber() {
+        const timestamp = Date.now().toString().slice(-6);
+        const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+        console.log(`OXB${timestamp}${random}`)
+
+    }
     return (
         <>
             <Navbar />
             <section className="min-h-screen bg-gray-50 py-12">
                 <div className="max-w-2xl mx-auto px-4">
-                    <div className="text-center mb-8 mt-28" >
+                    <div className="text-center mb-8 mt-18" >
                         <h1 className="text-4xl font-bold mb-4">Place Your Order</h1>
                         <p className="text-xl ">
                             Fill in your details and we'll take care of the rest
                         </p>
                     </div>
-
                     <div className="bg-white rounded-4xl shadow-lg p-8">
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
@@ -26,7 +53,7 @@ function Order() {
                                     <input
                                         type="text"
                                         name="name"
-
+                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="Enter your full name"
@@ -41,7 +68,7 @@ function Order() {
                                     <input
                                         type="tel"
                                         name="phone"
-
+                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="0700000000"
@@ -53,7 +80,7 @@ function Order() {
                                     <input
                                         type="text"
                                         name="building"
-
+                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="e.g., Kabete Valley"
@@ -68,7 +95,7 @@ function Order() {
                                     <input
                                         type="text"
                                         name="apartment"
-
+                                        onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="e.g., Apt 12B, House 45"
@@ -80,7 +107,7 @@ function Order() {
                                 <label className="block text-sm font-medium  mb-2">Service Type *</label>
                                 <select
                                     name="serviceType"
-
+                                    onChange={handleChange}
                                     required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                 >
@@ -98,7 +125,7 @@ function Order() {
                                 <input
                                     type="date"
                                     name="pickupDate"
-
+                                    onChange={handleChange}
                                     required
                                     min={new Date().toISOString().split('T')[0]}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
@@ -111,7 +138,7 @@ function Order() {
                                 </label>
                                 <textarea
                                     name="notes"
-
+                                    onChange={handleChange}
                                     rows={3}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                     placeholder="Any special instructions for handling your laundry..."
@@ -120,7 +147,8 @@ function Order() {
 
                             <button
                                 type="submit"
-                                className="w-full bg-custom-blue hover:bg-blue-900 text-white font-bold py-4 px-6 rounded-xl transition-colors"
+                                className="flex bg-custom-blue hover:bg-custom-yellow hover:cursor-pointer text-white font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
+                                onClick={generateRandomNumber}
                             >
                                 Generate Order Number & Proceed to Payment
                             </button>
