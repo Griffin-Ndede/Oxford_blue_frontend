@@ -68,7 +68,7 @@ function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Oxford Blue Laundry. All rights reserved.
+            © {new Date().getFullYear()} Oxford Blue Laundry. All rights reserved.
           </p>
         </div>
       </div>

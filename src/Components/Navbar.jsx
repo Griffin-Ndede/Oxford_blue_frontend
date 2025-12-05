@@ -9,8 +9,8 @@ function Navbar() {
 
     return (
         <>
-            <div className="flex justify-center">
-                <div className="w-5/6 mx-auto rounded-full mt-10 z-20 fixed px-10 py-4 shadow-2xl bg-white/90">
+            <div className="flex justify-center w-4xl mx-auto">
+                <div className="w-full   z-20 fixed px-10 py-4 shadow-2xl bg-white">
                     <div className="flex justify-between items-center w-full">
                         <div>
                             <Link to="/">

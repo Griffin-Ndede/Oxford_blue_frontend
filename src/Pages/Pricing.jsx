@@ -17,6 +17,8 @@ function Pricing() {
                     { name: "Bedsheets (Single)", price: "KES 120" },
                     { name: "Bedsheets (Double)", price: "KES 150" },
                     { name: "Towels", price: "KES 60" },
+                    { name: "Ties", price: "KES 50" },
+                    { name: "Dress Shirts", price: "KES 80" },
                 ],
             bgColor: 'bg-blue-50',
             borderColor: 'border-blue-200'
@@ -25,12 +27,11 @@ function Pricing() {
             category: "Suits and formal",
             icon: <BriefcaseBusiness strokeWidth={1} absoluteStrokeWidth className="w-10 h-10 mx-auto" />,
             laundry_items: [
-                { name: "Business Suit (2-piece)", price: "KES 400" },
-                { name: "Business Suit (3-piece)", price: "KES 500" },
+                { name: "Business Suit (2-piece)", price: "KES 500" },
+                { name: "Business Suit (3-piece)", price: "KES 600" },
                 { name: "Blazer/Jacket", price: "KES 250" },
                 { name: "Formal Dress", price: "KES 300" },
-                { name: "Ties", price: "KES 50" },
-                { name: "Dress Shirts", price: "KES 80" },
+
             ],
             bgColor: 'bg-purple-50',
             borderColor: 'border-purple-200'
@@ -45,6 +46,7 @@ function Pricing() {
                 { name: "Wedding Dresses", price: "KES 1,500" },
                 { name: "Curtains (per panel)", price: "KES 400" },
                 { name: "Delicate Fabrics", price: "KES 250" },
+                { name: "Duvet", price: "KES 800" }
             ],
             bgColor: 'bg-green-50',
             borderColor: 'border-green-200'
@@ -66,7 +68,7 @@ function Pricing() {
                             <div
                                 key={index}
                                 className={`${laundry_service.bgColor} border ${laundry_service.borderColor} p-8 rounded-3xl shadow hover:shadow-xl transition w-full`}>
-                                <div className="mb-4 text-blue-800 mx-auto text-center">
+                                <div className="mb-4 text-custom-blue mx-auto text-center">
                                     <div className='bg-white p-6 w-fit rounded-full mx-auto shadow-xl mb-4'>
                                         {laundry_service.icon}
                                     </div>
@@ -94,23 +96,23 @@ function Pricing() {
 
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
                     <div className="text-center mb-8">
-                        <Box className="h-12 w-12 text-blue-800 mx-auto mb-4" />
+                        <Box className="h-12 w-12 text-custom-blue mx-auto mb-4" />
                         <h2 className="text-2xl font-bold ">Additional Services</h2>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div>
                             <h3 className="text-lg font-bold  mb-4">Express Service</h3>
                             <p className=" mb-2">Same-day delivery available</p>
-                            <p className="font-bold text-blue-800">+50% surcharge</p>
+                            <p className="font-bold text-custom-blue">+50% surcharge</p>
                         </div>
                         <div>
                             <h3 className="text-lg font-bold  mb-4">Stain Removal</h3>
                             <p className=" mb-2">Specialized treatment for tough stains</p>
-                            <p className="font-bold text-blue-800">+KES 100 per item</p>
+                            <p className="font-bold text-custom-blue">+KES 100 per item</p>
                         </div>
                     </div>
                 </div>
-                <div className="mt-12 bg-blue-800 text-white rounded-2xl p-8">
+                <div className="mt-12 bg-custom-blue text-white rounded-2xl p-8">
                     <h2 className="text-2xl font-bold text-center mb-6">Service Areas</h2>
                     <p className="text-center text-blue-100 mb-4">
                         Free pickup and delivery within 10km of our facility

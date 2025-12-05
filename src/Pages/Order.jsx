@@ -28,7 +28,7 @@ function Order() {
                                         name="name"
 
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="Enter your full name"
                                     />
                                 </div>
@@ -43,7 +43,7 @@ function Order() {
                                         name="phone"
 
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="0700000000"
                                     />
                                 </div>
@@ -55,7 +55,7 @@ function Order() {
                                         name="building"
 
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="e.g., Kabete Valley"
                                     />
                                 </div>
@@ -70,7 +70,7 @@ function Order() {
                                         name="apartment"
 
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="e.g., Apt 12B, House 45"
                                     />
                                 </div>
@@ -82,7 +82,7 @@ function Order() {
                                     name="serviceType"
 
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                 >
                                     <option value="general">General Laundry</option>
                                     <option value="suits">Suits & Formal</option>
@@ -101,7 +101,7 @@ function Order() {
 
                                     required
                                     min={new Date().toISOString().split('T')[0]}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                 />
                             </div>
 
@@ -113,14 +113,14 @@ function Order() {
                                     name="notes"
 
                                     rows={3}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-blue-800 focus:border-blue-800 transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                     placeholder="Any special instructions for handling your laundry..."
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-4 px-6 rounded-xl transition-colors"
+                                className="w-full bg-custom-blue hover:bg-blue-900 text-white font-bold py-4 px-6 rounded-xl transition-colors"
                             >
                                 Generate Order Number & Proceed to Payment
                             </button>
