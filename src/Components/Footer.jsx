@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide
 
 function Footer() {
   return (
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-custom-blue text-white py-8">
       <div className="mx-auto px-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}

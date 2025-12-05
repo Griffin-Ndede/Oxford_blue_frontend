@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import { User, Phone, MapPin } from 'lucide-react'
+import { User, Phone, MapPin, CheckCircle } from 'lucide-react'
 
 
 function Order() {
@@ -16,6 +16,8 @@ function Order() {
         pickupDate: '',
         notes: '',
     })
+    const [orderNumber, setOrderNumber] = useState('');
+    const [showPayment, setShowPayment] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,12 +27,104 @@ function Order() {
         }))
     }
 
-    function generateRandomNumber() {
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const newOrderNumber = generateOrderNumber();
+        setOrderNumber(newOrderNumber);
+        setShowPayment(true)
+    }
+
+    function generateOrderNumber() {
         const timestamp = Date.now().toString().slice(-6);
         const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-        console.log(`OXB${timestamp}${random}`)
+        return (`OXB${timestamp}${random}`)
 
     }
+    // ✅ Generate dynamic WhatsApp message
+    const generateWhatsAppMessage = () => {
+        const message = `
+    🧺 *New Laundry Order - Oxford Blue Laundry*
+
+        *Order Number:* ${orderNumber || '(Not generated yet)'}
+        *Name:* ${formData.name}
+        *Phone:* ${formData.phone}
+        *Address:* ${formData.building}, ${formData.apartment}
+        *Service Type:* ${formData.serviceType === 'general'
+                    ? 'General Laundry'
+                    : formData.serviceType === 'suits'
+                        ? 'Suits & Formal'
+                        : formData.serviceType === 'homecare'
+                            ? 'Home Care'
+                            : 'Dry Cleaning'
+                }
+        *Pickup Date:* ${formData.pickupDate}
+        *Notes:* ${formData.notes || 'None'}
+
+        Please confirm my order.
+    `;
+
+        return `https://wa.me/254797228429?text=${encodeURIComponent(message)}`;
+    };
+
+    // display this div if show payment is true change the UI
+    if (showPayment) {
+        return (
+            <>
+                <Navbar />
+                <div className="min-h-screen bg-gray-50 py-12">
+                    <div className="max-w-2xl mx-auto px-4 mt-20">
+                        <div className="bg-white rounded-4xl shadow-xl p-8 text-center">
+                            <CheckCircle className="h-16 w-16 text-custom-yellow mx-auto mb-6" />
+                            <h1 className="text-3xl font-bold text-gray-900 mb-4">Your order is ready to be placed!</h1>
+
+                            <div className="bg-custom-yellow rounded-full p-6 mb-8">
+                                <h2 className="text-xl font-bold text-white mb-2">Your Order Number</h2>
+                                <p className="text-3xl font-bold text-white">{orderNumber}</p>
+                            </div>
+
+                            <div className="text-left mb-8 space-y-2">
+                                <p>
+                                    <strong>Name:</strong> {formData.name}
+                                </p>
+                                <p>
+                                    <strong>Phone:</strong> {formData.phone}
+                                </p>
+                                <p>
+                                    <strong>Address:</strong> {formData.apartment}, {formData.building}
+                                </p>
+                                <p>
+                                    <strong>Service:</strong>{' '}
+                                    {formData.serviceType === 'general'
+                                        ? 'General Laundry'
+                                        : formData.serviceType === 'suits'
+                                            ? 'Suits & Formal'
+                                            : formData.serviceType === 'homecare'
+                                                ? 'Home Care'
+                                                : 'Dry Cleaning'}
+                                </p>
+                                <p>
+                                    <strong>Pickup Date:</strong> {formData.pickupDate}
+                                </p>
+                            </div>
+
+                            {/* ✅ Add WhatsApp order confirmation button */}
+                            <a
+                                href={generateWhatsAppMessage()}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block mt-6 bg-custom-green hover:bg-custom-green2 text-white font-bold py-3 px-6 rounded-full w-fit mx-auto transition-colors"
+                            >
+                                Send Order via WhatsApp
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </>
+
+        );
+    }
+
     return (
         <>
             <Navbar />
@@ -43,7 +137,8 @@ function Order() {
                         </p>
                     </div>
                     <div className="bg-white rounded-4xl shadow-lg p-8">
-                        <form className="space-y-6">
+                        <form className="space-y-6"
+                            onSubmit={handleSubmit}>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium  mb-2">
@@ -148,9 +243,9 @@ function Order() {
                             <button
                                 type="submit"
                                 className="flex bg-custom-blue hover:bg-custom-yellow hover:cursor-pointer text-white font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
-                                onClick={generateRandomNumber}
+                                onClick={generateOrderNumber}
                             >
-                                Generate Order Number & Proceed to Payment
+                                Generate Order Number & Proceed to place it
                             </button>
                         </form>
                     </div>

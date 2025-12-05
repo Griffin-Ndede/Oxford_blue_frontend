@@ -66,7 +66,7 @@ function Pricing() {
                         laundry_services.map((laundry_service, index) => (
                             <div
                                 key={index}
-                                className={` ${ index % 2 === 1 ? 'bg-custom-blue': 'bg-custom-yellow'} p-8  h-fit rounded-3xl shadow hover:shadow-xl transition w-full`}>
+                                className={` ${ index % 2 === 1 ? 'bg-custom-blue': 'bg-custom-yellow'} p-8  rounded-3xl shadow hover:shadow-xl transition w-full`}>
                                 <div className="mb-4 text-custom-blue mx-auto text-center">
                                     <div className={`bg-white p-6 w-fit rounded-full mx-auto shadow-xl mb-4 ${ index % 2 === 1 ? 'text-custom-blue': 'text-custom-yellow'}`}>
                                         {laundry_service.icon}

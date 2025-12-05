@@ -58,9 +58,9 @@ function Home() {
                     </p>
 
                     {/* CTA Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 w-full max-w-2xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto">
                         <Link to="/pricing">
-                            <div className="bg-custom-yellow/90 hover:bg-custom-yellow hover:cursor-pointer backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-custom-blue transition">
+                            <div className="bg-custom-yellow/90 hover:bg-custom-yellow hover:cursor-pointer backdrop-blur-lg border border-white/20 p-6 rounded-4xl text-custom-blue transition">
                                 <DollarSign className="mx-auto mb-3 text-white" size={42} />
                                 <h2 className="text-xl font-semibold text-white">View Pricing</h2>
                                 <p className="text-base font-light text-white mt-1">
@@ -70,7 +70,7 @@ function Home() {
                         </Link>
 
                         <Link to="/order">
-                            <div className="bg-custom-yellow/90 hover:bg-custom-yellow hover:cursor-pointer backdrop-blur-lg border border-white/20 p-6 rounded-2xl text-custom-blue transition">
+                            <div className="bg-custom-yellow/90 hover:bg-custom-yellow hover:cursor-pointer backdrop-blur-lg border border-white/20 p-6 rounded-4xl text-custom-blue transition">
                                 <ShoppingCart className="mx-auto mb-3 text-white" size={42} />
                                 <h2 className="text-xl text-white font-semibold">Place Order</h2>
                                 <p className="text-base font-light text-white mt-1">
