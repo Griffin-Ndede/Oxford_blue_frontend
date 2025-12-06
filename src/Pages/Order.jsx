@@ -226,6 +226,23 @@ function Order() {
                                     className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                 />
                             </div>
+                              <div>
+                                <label className="block text-sm font-medium  mb-2">
+                                    Preferred Pickup Time *
+                                </label>
+                                <select
+                                    type="date"
+                                    name="pickupDate"
+                                    onChange={handleChange}
+                                    required
+                                    min={new Date().toISOString().split('T')[0]}
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
+                                >
+                                    <option value="morning">Morning</option>
+                                    <option value="afternoon">Afternoon</option>
+                                    <option value="evening">Evening</option>
+                                </select>
+                            </div>
 
                             <div>
                                 <label className="block text-sm font-medium  mb-2">
