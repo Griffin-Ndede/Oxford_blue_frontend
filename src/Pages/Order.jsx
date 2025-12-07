@@ -63,7 +63,7 @@ function Order() {
         Please confirm my order.
     `;
 
-        return `https://wa.me/254797228429?text=${encodeURIComponent(message)}`;
+        return `https://wa.me/254746942764?text=${encodeURIComponent(message)}`;
     };
 
     // display this div if show payment is true change the UI
