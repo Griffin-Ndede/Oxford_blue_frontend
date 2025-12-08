@@ -75,7 +75,7 @@ function Order() {
         Please confirm my order.
     `;
 
-        return `https://wa.me/254797228429?text=${encodeURIComponent(message)}`;
+        return `https://wa.me/254746942764?text=${encodeURIComponent(message)}`;
     };
 
     // display this div if show payment is true change the UI
@@ -111,14 +111,6 @@ function Order() {
                                         if (type === "homecare") return "Home Care"
                                         if (type === "drycleaning") return "Dry Cleaning"
                                     }).join(", ")}
-                                    {/* {' '}
-                                    {formData.serviceType === 'general'
-                                        ? 'General Laundry'
-                                        : formData.serviceType === 'suits'
-                                            ? 'Suits & Formal'
-                                            : formData.serviceType === 'homecare'
-                                                ? 'Home Care'
-                                                : 'Dry Cleaning'} */}
                                 </p>
                                 <p>
                                     <strong>Pickup Date:</strong> {formData.pickupDate}

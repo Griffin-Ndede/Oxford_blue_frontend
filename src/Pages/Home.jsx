@@ -122,7 +122,7 @@ function Home() {
                         [
                             {
                                 step: 1,
-                                title: "pickup",
+                                title: "Pickup",
                                 description: "We collect your laundry at your convenience",
                             },
                             {

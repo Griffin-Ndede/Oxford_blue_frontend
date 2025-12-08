@@ -11,14 +11,20 @@ function Pricing() {
             icon: <Shirt strokeWidth={1} absoluteStrokeWidth className="w-10 h-10 mx-auto" />,
             laundry_items:
                 [
-                    { name: "T-Shirts" },
-                    { name: "Jeans/Trousers" },
-                    { name: "Dresses" },
-                    { name: "Bedsheets (Single)" },
-                    { name: "Bedsheets (Double)" },
-                    { name: "Towels" },
-                    { name: "Ties" },
-                    { name: "Dress Shirts"},
+                    { name: "T-Shirts", price: "KES 80 per Kg" },
+                    { name: "Jeans/Trousers", price: "KES 80 per Kg" },
+                    { name: "Dresses", price: "KES 80 per Kg" },
+                    { name: "Bedsheets (Single)", price: "KES 80 per Kg" },
+                    { name: "Bedsheets (Double)", price: "KES 80 per Kg" },
+                    { name: "Towels" , price: "KES 80 per Kg"},
+                    { name: "Ties", price: "KES 80 per Kg" },
+                    { name: "Dress Shirts", price: "KES 80 per Kg"},
+                    {name: "Skirts" , price: "KES 80 per Kg"},
+                    {name:"Socks", price: "KES 80 per Kg"},
+                    {name:"Baby clothes", price: "KES 80 per Kg"},
+                    {name: "School uniforms", price: "KES 80 per Kg"},
+                    {name:"Shoes", price: "KES 100 per pair"}
+
                 ],
             bgColor: 'bg-custom-yellow',
             borderColor: 'border-custom-yellow'
@@ -43,7 +49,7 @@ function Pricing() {
                 { name: "Leather Jackets", price: "KES 800" },
                 { name: "Coats & Overcoats", price: "KES 600" },
                 { name: "Silk Garments", price: "KES 300" },
-                { name: "Wedding Dresses", price: "KES 1,500" },
+                { name: "Wedding Dresses", price: "KES 3,000" },
                 { name: "Curtains (per panel)", price: "KES 400" },
                 { name: "Delicate Fabrics", price: "KES 250" },
                 { name: "Duvet", price: "KES 800" }
