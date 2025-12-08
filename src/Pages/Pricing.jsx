@@ -8,22 +8,23 @@ function Pricing() {
     const laundry_services = [
         {
             category: "General laundry",
+            text: "KES 80 per kg",
             icon: <Shirt strokeWidth={1} absoluteStrokeWidth className="w-10 h-10 mx-auto" />,
             laundry_items:
                 [
-                    { name: "T-Shirts", price: "KES 80 per Kg" },
-                    { name: "Jeans/Trousers", price: "KES 80 per Kg" },
-                    { name: "Dresses", price: "KES 80 per Kg" },
-                    { name: "Bedsheets (Single)", price: "KES 80 per Kg" },
-                    { name: "Bedsheets (Double)", price: "KES 80 per Kg" },
-                    { name: "Towels" , price: "KES 80 per Kg"},
-                    { name: "Ties", price: "KES 80 per Kg" },
-                    { name: "Dress Shirts", price: "KES 80 per Kg"},
-                    {name: "Skirts" , price: "KES 80 per Kg"},
-                    {name:"Socks", price: "KES 80 per Kg"},
-                    {name:"Baby clothes", price: "KES 80 per Kg"},
-                    {name: "School uniforms", price: "KES 80 per Kg"},
-                    {name:"Shoes", price: "KES 100 per pair"}
+                    { name: "T-Shirts" },
+                    { name: "Jeans/Trousers" },
+                    { name: "Dresses" },
+                    { name: "Bedsheets (Single)" },
+                    { name: "Bedsheets (Double)" },
+                    { name: "Towels" },
+                    { name: "Ties" },
+                    { name: "Dress Shirts"},
+                    {name: "Skirts" },
+                    {name:"Socks"},
+                    {name:"Baby clothes"},
+                    {name: "School uniforms"},
+                    {name:"Shoes"}
 
                 ],
             bgColor: 'bg-custom-yellow',
@@ -78,6 +79,7 @@ function Pricing() {
                                         {laundry_service.icon}
                                     </div>
                                     <h1 className={`text-2xl font-bold ${ index % 2 === 1 ? 'text-custom-yellow': 'text-custom-yellow'}`}>{laundry_service.category}</h1>
+                                    <p className={`text-xl ${ index % 2 === 1 ? 'text-custom-yellow': 'text-custom-yellow'}`}>{laundry_service.text}</p>
                                 </div>
 
                                 <table className='w-full'>
