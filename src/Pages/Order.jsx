@@ -12,7 +12,7 @@ function Order() {
         phone: '',
         apartment: '',
         building: '',
-        serviceType: 'general',
+        serviceType: [],
         pickupDate: '',
         notes: '',
     })
@@ -20,12 +20,25 @@ function Order() {
     const [showPayment, setShowPayment] = useState(false);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }))
-    }
+        const { name, value, multiple, options } = e.target;
+
+        if (multiple) {
+            const selectedValues = Array.from(options)
+                .filter(option => option.selected)
+                .map(option => option.value);
+
+            setFormData(prev => ({
+                ...prev,
+                [name]: selectedValues
+            }));
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                [name]: value
+            }));
+        }
+    };
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -49,21 +62,20 @@ function Order() {
         *Name:* ${formData.name}
         *Phone:* ${formData.phone}
         *Address:* ${formData.building}, ${formData.apartment}
-        *Service Type:* ${formData.serviceType === 'general'
-                    ? 'General Laundry'
-                    : formData.serviceType === 'suits'
-                        ? 'Suits & Formal'
-                        : formData.serviceType === 'homecare'
-                            ? 'Home Care'
-                            : 'Dry Cleaning'
-                }
+        *Service Types:* ${formData.serviceType.map(type => {
+            if (type === "general") return "General Laundry"
+            if (type === "suits") return "Suits & Formal"
+            if (type === "homecare") return "Home Care"
+            if (type === "drycleaning") return "Dry Cleaning"
+        }).join(", ")}
+
         *Pickup Date:* ${formData.pickupDate}
         *Notes:* ${formData.notes || 'None'}
 
         Please confirm my order.
     `;
 
-        return `https://wa.me/254746942764?text=${encodeURIComponent(message)}`;
+        return `https://wa.me/254797228429?text=${encodeURIComponent(message)}`;
     };
 
     // display this div if show payment is true change the UI
@@ -93,14 +105,20 @@ function Order() {
                                     <strong>Address:</strong> {formData.apartment}, {formData.building}
                                 </p>
                                 <p>
-                                    <strong>Service:</strong>{' '}
+                                    <strong>Services:</strong> {formData.serviceType.map(type => {
+                                        if (type === "general") return "General Laundry"
+                                        if (type === "suits") return "Suits & Formal"
+                                        if (type === "homecare") return "Home Care"
+                                        if (type === "drycleaning") return "Dry Cleaning"
+                                    }).join(", ")}
+                                    {/* {' '}
                                     {formData.serviceType === 'general'
                                         ? 'General Laundry'
                                         : formData.serviceType === 'suits'
                                             ? 'Suits & Formal'
                                             : formData.serviceType === 'homecare'
                                                 ? 'Home Care'
-                                                : 'Dry Cleaning'}
+                                                : 'Dry Cleaning'} */}
                                 </p>
                                 <p>
                                     <strong>Pickup Date:</strong> {formData.pickupDate}
@@ -136,9 +154,24 @@ function Order() {
                             Fill in your details and we'll take care of the rest
                         </p>
                     </div>
-                    <div className="bg-white rounded-4xl shadow-lg p-8">
+                    <div className="bg-custom-blue rounded-4xl shadow-lg p-8 text-white">
                         <form className="space-y-6"
                             onSubmit={handleSubmit}>
+                            <div>
+                                <label className="block text-sm font-medium  mb-2">Service Type *</label>
+                                <select
+                                    name="serviceType"
+                                    onChange={handleChange}
+                                    required
+                                    multiple
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
+                                >
+                                    <option value="general">General Laundry</option>
+                                    <option value="suits">Suits & Formal</option>
+                                    <option value="homecare">Home Care</option>
+                                    <option value="drycleaning">Dry Cleaning</option>
+                                </select>
+                            </div>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium  mb-2">
@@ -150,7 +183,7 @@ function Order() {
                                         name="name"
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
+                                        className="w-full px-4 py-3 border placeholder:text-white border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                         placeholder="Enter your full name"
                                     />
                                 </div>
@@ -198,20 +231,7 @@ function Order() {
                                 </div>
                             </div>
 
-                            <div>
-                                <label className="block text-sm font-medium  mb-2">Service Type *</label>
-                                <select
-                                    name="serviceType"
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
-                                >
-                                    <option value="general">General Laundry</option>
-                                    <option value="suits">Suits & Formal</option>
-                                    <option value="homecare">Home Care</option>
-                                    <option value="drycleaning">Dry Cleaning</option>
-                                </select>
-                            </div>
+
 
                             <div>
                                 <label className="block text-sm font-medium  mb-2">
@@ -226,7 +246,7 @@ function Order() {
                                     className="w-full px-4 py-3 border border-gray-300 rounded-3xl focus:ring-1 focus:ring-custom-blue focus:border-custom-blue transition-colors"
                                 />
                             </div>
-                              <div>
+                            <div>
                                 <label className="block text-sm font-medium  mb-2">
                                     Preferred Pickup Time *
                                 </label>
@@ -259,7 +279,7 @@ function Order() {
 
                             <button
                                 type="submit"
-                                className="flex bg-custom-blue hover:bg-custom-yellow hover:cursor-pointer text-white font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
+                                className="flex bg-custom-yellow hover:text-white hover:cursor-pointer text-custom-blue font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
                                 onClick={generateOrderNumber}
                             >
                                 Generate Order Number & Proceed to place it

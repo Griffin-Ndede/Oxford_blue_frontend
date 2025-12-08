@@ -47,9 +47,9 @@ function Home() {
                 </div>
                 {/* Content */}
                 <div className="relative max-w-4xl mx-auto text-center px-6">
-                    <h1 className="text-5xl sm:text-7xl font-extrabold text-custom-blue mb-6 leading-tight mt-32 md:mt-0">
+                    <h1 className="text-5xl sm:text-7xl font-extrabold text-custom-blue mb-6 leading-10 mt-32 md:mt-0">
                         Oxford Blue Laundry <br />
-                        <span className="text-custom-yellow italic text-6xl">- do other things</span>
+                        <span className="text-blue-950 font-semibold italic text-4xl">- do other things</span>
                     </h1>
 
                     <p className="text-lg font-light sm:text-xl max-w-3xl mx-auto mb-12">
