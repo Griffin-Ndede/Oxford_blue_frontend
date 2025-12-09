@@ -58,7 +58,7 @@ function Home() {
                     </p>
 
                     {/* CTA Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto mb-10">
                         <Link to="/pricing">
                             <div className="bg-custom-blue/90 hover:bg-custom-blue hover:cursor-pointer backdrop-blur-lg border border-white/20 p-6 rounded-4xl text-custom-blue transition">
                                 <DollarSign className="mx-auto mb-3 text-white" size={42} />
