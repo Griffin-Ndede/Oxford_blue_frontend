@@ -1,4 +1,4 @@
-import { Clock, DollarSign, ShoppingCart, Star, Truck } from 'lucide-react'
+import { Clock, DollarSign, ShoppingCart, Star, Truck, MoveRight } from 'lucide-react'
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
@@ -82,7 +82,50 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <section className='h-fit p-10 bg-slate-100'>
+                <h1 className='text-center font-bold text-4xl text-custom-blue mb-6'>Our simple process</h1>
+                <div className='grid grid-cols-1 md:grid-cols-4'>
+                    {
+                        [
+                            {
+                                step: 1,
+                                title: "Pickup",
+                                description: "We collect your laundry at your convenience",
+                                icon: <MoveRight size={48} strokeWidth={2} absoluteStrokeWidth />
+                            },
+                            {
+                                step: 2,
+                                title: 'Clean',
+                                description: 'Professional cleaning with premium detergents',
+                                icon: <MoveRight size={48} strokeWidth={2} absoluteStrokeWidth />
 
+                            },
+                            {
+                                step: 3,
+                                title: 'Press & Fold',
+                                description: 'Expert pressing and careful folding',
+                                icon: <MoveRight size={48} strokeWidth={2} absoluteStrokeWidth />
+
+                            },
+                            {
+                                step: 4,
+                                title: 'Deliver',
+                                description: 'Fresh, clean clothes delivered to you'
+                            },
+                        ].map((process) => (
+                            <div className='text-center relative'>
+                                <h1 className='font-bold text-white text-3xl rounded-full bg-custom-yellow p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
+                                <div className='absolute -right-2 top-5 text-custom-yellow hidden md:block'>{process.icon}</div>
+                                <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
+                                <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>{process.description}</p>
+                            </div>
+
+                        ))
+                    }
+
+
+                </div>
+            </section>
             <section className='h-fit mx-auto p-10'>
                 <h1 className='text-4xl font-bold text-custom-blue mb-10 text-center'>Why Choose Oxford blue?</h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-10 text-center max-w-7xl mx-auto'>
@@ -115,47 +158,10 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className='h-fit p-10 bg-slate-100'>
-                <h1 className='text-center font-bold text-4xl text-custom-blue mb-6'>Our simple process</h1>
-                <div className='grid grid-cols-1 md:grid-cols-4'>
-                    {
-                        [
-                            {
-                                step: 1,
-                                title: "Pickup",
-                                description: "We collect your laundry at your convenience",
-                            },
-                            {
-                                step: 2,
-                                title: 'Clean',
-                                description: 'Professional cleaning with premium detergents'
-                            },
-                            {
-                                step: 3,
-                                title: 'Press & Fold',
-                                description: 'Expert pressing and careful folding'
-                            },
-                            {
-                                step: 4,
-                                title: 'Deliver',
-                                description: 'Fresh, clean clothes delivered to you'
-                            },
-                        ].map((process) => (
-                            <div className='text-center'>
-                                <h1 className='font-bold text-white text-3xl rounded-full bg-custom-yellow p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
-                                <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
-                                <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>{process.description}</p>
-                            </div>
 
-                        ))
-                    }
-
-
-                </div>
-            </section>
             <section className='h-fit p-10'>
                 <h1 className='text-center font-bold text-4xl text-custom-blue mb-6'>Our service process</h1>
-                <p className='text- font-light text-center max-w-3xl mx-auto mb-10'>From pickup to delivery, see how we handle your laundry with the utmost care and professionalism.</p>
+                <p className=' font-light text-center max-w-3xl mx-auto mb-10'>From pickup to delivery, see how we handle your laundry with the utmost care and professionalism.</p>
                 {services.map((service, index) => (
                     <div
                         key={index}
