@@ -3,14 +3,14 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide
 
 function Footer() {
   return (
-      <footer className="bg-custom-blue text-white py-8">
+    <footer className="bg-custom-blue text-white py-8">
       <div className="mx-auto px-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-3xl font-bold mb-4 text-blue-400">Oxford Blue Laundry</h3>
             <p className="text-white mb-6 font-light">
-              Do Other Things. Premium home laundry services with pickup and delivery. 
+              Premium home laundry services with pickup and delivery.
               Experience the Oxford Blue Laundry difference in quality and convenience.
             </p>
             <div className="flex space-x-4">
@@ -26,7 +26,7 @@ function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-white">+254 700 123 456</span>
+                <span className="text-white">+254 746 942 764</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-blue-400" />
@@ -45,10 +45,10 @@ function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-blue-400" />
-                <span className="text-white">Mon - Fri: 7:00 AM - 8:00 PM</span>
+                <span className="text-white">Mon - Fri: 7:00 AM - 10:00 PM</span>
               </div>
-              <div className="text-white ml-6">Saturday: 8:00 AM - 6:00 PM</div>
-              <div className="text-white ml-6">Sunday: 9:00 AM - 5:00 PM</div>
+              <div className="text-white ml-6">Saturday: 8:00 AM - 8:00 PM</div>
+              <div className="text-white ml-6">Sunday: 8:00 AM - 8:00 PM</div>
             </div>
           </div>
 

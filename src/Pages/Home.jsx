@@ -9,25 +9,25 @@ function Home() {
         {
             title: "Professional Pickup Service",
             description: "Our friendly team arrives at your doorstep to collect your laundry with care and professionalism.",
-            image: "https://images.ctfassets.net/9ycpqnc6ohsr/6CCVOCZnGmKCfE1HiETinK/f8cb90a383efdbb80eae1893374a4a52/ef9e5dab2cc86043cb7dc3a241c72716_2x.jpg",
+            image: "https://cdn.prod.website-files.com/65cbb48f5b384ad6532e1932/65d77549f26fc2ba2df860b8_northwest-arkansas-bentonville-laundry-service.webp",
             step: 1,
         },
         {
             title: "Expert Cleaning Process",
             description: "State-of-the-art equipment and premium detergents ensure your clothes get the best treatment.",
-            image: "https://png.pngtree.com/png-vector/20240322/ourmid/pngtree-home-service-house-cleaning-and-laundry-wash-png-image_12190003.png",
+            image: "https://mycleaningangel.com/wp-content/uploads/2023/03/cleaning-your-laundry.jpg",
             step: 2,
         },
         {
             title: "Precision ironing and folding",
             description: "Skilled professionals iron and fold each garment with attention to detail and care.",
-            image: "https://images.ctfassets.net/9ycpqnc6ohsr/6CCVOCZnGmKCfE1HiETinK/f8cb90a383efdbb80eae1893374a4a52/ef9e5dab2cc86043cb7dc3a241c72716_2x.jpg",
+            image: "https://images-cdn.ubuy.co.in/646eed440972c13dca06f5f3-wall-mounted-ironing-board-foldable.jpg",
             step: 3,
         },
         {
             title: "Timely delivery",
             description: "Your fresh, clean laundry is delivered back to you right on schedule, ready to wear.",
-            image: "https://images.ctfassets.net/9ycpqnc6ohsr/6CCVOCZnGmKCfE1HiETinK/f8cb90a383efdbb80eae1893374a4a52/ef9e5dab2cc86043cb7dc3a241c72716_2x.jpg",
+            image: "https://www.columbusexpresslaundry.com/media/akqhjwls/laundry-service.jpg?anchor=center&mode=pad&width=1920&format=webp&quality=80",
             step: 4
         }
     ]
@@ -175,7 +175,7 @@ function Home() {
                             </div>
                             {/* Image */}
                             <img
-                                className="lg:w-1/2 w-full h-80 object-cover rounded-4xl shadow-md"
+                                className="lg:w-1/2 w-full h-96 object-cover rounded-4xl shadow-md"
                                 src={service.image}
                                 alt={service.title}
                             />
