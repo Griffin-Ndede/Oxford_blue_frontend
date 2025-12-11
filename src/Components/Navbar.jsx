@@ -15,9 +15,9 @@ function Navbar() {
                         <div>
                             <Link to="/">
                                 <img
-                                    src="https://static.vecteezy.com/system/resources/thumbnails/007/610/185/small/laundry-logo-design-template-emblem-concept-design-creative-symbol-icon-free-vector.jpg"
+                                    src="/public/images/oxfordblue_logo.png"
                                     alt="Bluprint Designs logo"
-                                    className="w-auto h-10"
+                                    className="w-auto h-14"
                                 />
                             </Link>
                         </div>
