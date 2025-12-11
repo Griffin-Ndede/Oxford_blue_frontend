@@ -15,8 +15,8 @@ function Navbar() {
                         <div>
                             <Link to="/">
                                 <img
-                                    src="/public/images/oxfordblue_logo.png"
-                                    alt="Bluprint Designs logo"
+                                    src="/images/oxfordblue_logo.png"
+                                    alt="oxfordblue_logo"
                                     className="w-auto h-14"
                                 />
                             </Link>
