@@ -126,7 +126,7 @@ function Home() {
 
                 </div>
             </section>
-            <section className='h-fit mx-auto p-10'>
+            <section className='h-fit mx-auto p-10 bg-slate-300'>
                 <h1 className='text-4xl font-bold text-custom-blue mb-10 text-center'>Why Choose Oxford Blue?</h1>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-10 text-center max-w-7xl mx-auto'>
                     <div className='p-10'>
