@@ -1,10 +1,14 @@
 import { Clock, DollarSign, ShoppingCart, Star, Truck, MoveRight } from 'lucide-react'
-import React from 'react'
+import {useContext} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router'
-function Home() {
+import UserContext from './UserContect'
 
+function Home() {
+    const {user, login} = useContext(UserContext)
+
+console.log(user)
     const services = [
         {
             title: "Professional Pickup Service",
@@ -46,7 +50,9 @@ function Home() {
                     <div className="absolute inset-0 bg-white/70 backdrop-blur-xs"></div>
                 </div>
                 {/* Content */}
+
                 <div className="relative max-w-4xl mx-auto text-center px-6">
+
                     <h1 className="text-5xl sm:text-7xl font-extrabold text-custom-blue mb-6 leading-10 mt-32 md:mt-0">
                         Oxford Blue Laundry <br />
                         <span className="text-blue-950 font-semibold italic text-4xl">- do other things</span>
@@ -56,7 +62,10 @@ function Home() {
                         We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
                         Experience the Oxford Blue Laundry difference.
                     </p>
-
+                    <div className='text-4xl'>
+                        Hello, {user}!
+                        <button onClick={login}>Login</button>
+                    </div>
                     {/* CTA Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto mb-10">
                         <Link to="/pricing">
@@ -113,7 +122,9 @@ function Home() {
                                 description: 'Fresh, clean clothes delivered to you'
                             },
                         ].map((process) => (
-                            <div className='text-center relative'>
+                            <div 
+                            key={process.step} 
+                            className='text-center relative'>
                                 <h1 className='font-bold text-white text-3xl rounded-full bg-custom-yellow p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
                                 <div className='absolute -right-2 top-5 text-custom-yellow hidden md:block'>{process.icon}</div>
                                 <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
@@ -222,7 +233,9 @@ function Home() {
                                 description: "Your garments are fully protected."
                             }
                         ].map((item) => (
-                            <div className='bg-white p-6 rounded-3xl text-center'>
+                            <div 
+                            key={item.title}
+                            className='bg-white p-6 rounded-3xl text-center'>
                                 <h1 className='text-xl font-bold mb-3'>
                                     {item.title}
                                 </h1>

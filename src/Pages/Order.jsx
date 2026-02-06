@@ -6,7 +6,6 @@ import { User, Phone, MapPin, CheckCircle } from 'lucide-react'
 
 function Order() {
 
-
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
