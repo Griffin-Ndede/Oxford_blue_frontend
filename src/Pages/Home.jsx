@@ -64,7 +64,8 @@ console.log(user)
                     </p>
                     <div className='text-4xl'>
                         Hello, {user}!
-                        <button onClick={login}>Login</button>
+                    {user === "" && <button onClick={login}>Login</button>
+ }
                     </div>
                     {/* CTA Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto mb-10">

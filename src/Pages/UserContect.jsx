@@ -5,9 +5,10 @@ const UserContext = createContext()
 
 export const UserContextProvider = ({ children }) => {
 
-    const [user, setUser] = useState("John Doe")
+    const [user, setUser] = useState("")
     function login() {
-        alert("Logged in")
+        const username = prompt("Enter your username")
+        setUser(username)
     }
     return (
 
