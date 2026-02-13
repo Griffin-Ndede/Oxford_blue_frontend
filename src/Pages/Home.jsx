@@ -62,11 +62,7 @@ console.log(user)
                         We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
                         Experience the Oxford Blue Laundry difference.
                     </p>
-                    <div className='text-4xl'>
-                        Hello, {user}!
-                    {user === "" && <button onClick={login}>Login</button>
- }
-                    </div>
+                
                     {/* CTA Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto mb-10">
                         <Link to="/pricing">
