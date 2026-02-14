@@ -123,7 +123,7 @@ console.log(user)
                             key={process.step} 
                             className='text-center relative'>
                                 <h1 className='font-bold text-white text-3xl rounded-full bg-custom-yellow p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
-                                <div className='absolute -right-2 top-5 text-custom-yellow hidden md:block'>{process.icon}</div>
+                                <div className='absolute -right-2 top-5 text-custom-blue hidden md:block'>{process.icon}</div>
                                 <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
                                 <p className='text-lg font-light text-slate-700 text-center max-w-4xl mx-auto mb-6'>{process.description}</p>
                             </div>
