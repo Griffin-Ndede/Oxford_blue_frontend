@@ -1,14 +1,10 @@
 import { Clock, DollarSign, ShoppingCart, Star, Truck, MoveRight } from 'lucide-react'
-import {useContext} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router'
-import UserContext from './UserContect'
 
 function Home() {
-    const {user, login} = useContext(UserContext)
 
-console.log(user)
     const services = [
         {
             title: "Professional Pickup Service",
