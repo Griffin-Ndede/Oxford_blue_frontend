@@ -9,8 +9,8 @@ function Navbar() {
 
     return (
         <>
-            {/* <div className="flex justify-center w-4xl mx-auto"> */}
-                <div className="w-full   z-20 fixed px-10 py-4 shadow-2xl bg-white">
+            <div className="flex justify-center w-4xl mx-auto">
+                <div className="w-2/3 mt-6 rounded-full z-20 fixed px-10 py-2 shadow-2xl bg-white">
                     <div className="flex justify-between items-center w-full">
                         <div>
                             <Link to="/">
@@ -70,7 +70,7 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-            {/* </div> */}
+            </div>
 
             {/* Mobile Menu */}
             {isMenuOpen && (

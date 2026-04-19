@@ -145,7 +145,7 @@ function Order() {
                             Fill in your details and we'll take care of the rest
                         </p>
                     </div>
-                    <div className="bg-custom-blue rounded-4xl shadow-lg p-8 text-white">
+                    <div className="border border-custom-yellow rounded-4xl shadow-lg p-8">
                         <form className="space-y-6"
                             onSubmit={handleSubmit}>
                             <div>
@@ -270,7 +270,7 @@ function Order() {
 
                             <button
                                 type="submit"
-                                className="flex bg-custom-yellow hover:text-white hover:cursor-pointer text-custom-blue font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
+                                className="flex bg-custom-yellow hover:text-white hover:cursor-pointer font-bold py-4 px-6 rounded-4xl w-fit mx-auto transition-colors"
                                 onClick={generateOrderNumber}
                             >
                                 Generate Order Number & Proceed to place it
