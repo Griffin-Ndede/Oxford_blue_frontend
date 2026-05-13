@@ -58,7 +58,7 @@ function Home() {
                         We pick up your laundry, clean it to perfection, fold and iron with care, then deliver it back to your doorstep.
                         Experience the Oxford Blue Laundry difference.
                     </p>
-                
+
                     {/* CTA Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-20 mt-8 w-full max-w-3xl mx-auto mb-10">
                         <Link to="/pricing">
@@ -115,9 +115,9 @@ function Home() {
                                 description: 'Fresh, clean clothes delivered to you'
                             },
                         ].map((process) => (
-                            <div 
-                            key={process.step} 
-                            className='text-center relative'>
+                            <div
+                                key={process.step}
+                                className='text-center relative'>
                                 <h1 className='font-bold text-white text-3xl rounded-full bg-custom-yellow p-3 w-16 h-16 flex items-center justify-center mx-auto mb-6'>{process.step}</h1>
                                 <div className='absolute -right-2 top-5 text-custom-blue hidden md:block'>{process.icon}</div>
                                 <h2 className='text-xl font-bold text-gray-900 mb-2'>{process.title}</h2>
@@ -193,12 +193,12 @@ function Home() {
                                     {service.description}
                                 </p>
 
-                                {/* <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-3">
                                     <div className="w-14 h-1 bg-custom-yellow rounded-full"></div>
                                     <span className="text-custom-blue font-semibold tracking-wide">
                                         Step {service.step}
                                     </span>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -226,9 +226,9 @@ function Home() {
                                 description: "Your garments are fully protected."
                             }
                         ].map((item) => (
-                            <div 
-                            key={item.title}
-                            className='bg-white p-6 rounded-3xl text-center'>
+                            <div
+                                key={item.title}
+                                className='bg-white p-6 rounded-3xl text-center'>
                                 <h1 className='text-xl font-bold mb-3'>
                                     {item.title}
                                 </h1>
